@@ -1,5 +1,5 @@
 <?php
-$dir = "../../Control/uploads/"; // Definimos el directorio donde se guardará el archivo
+$dir = "../../uploads/"; // Definimos el directorio donde se guardará el archivo
 $target_file = $dir . basename($_FILES["archivo"]["name"]);
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 

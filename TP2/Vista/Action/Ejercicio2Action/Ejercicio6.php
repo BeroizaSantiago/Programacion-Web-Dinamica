@@ -40,7 +40,7 @@ echo "<!DOCTYPE html>
 
     // Mostrar los deportes seleccionados junto con la cantidad
     if ($cantidad_deportes > 0) {
-        echo "<p>Practica $cantidad_deportes deporte(s): " . implode(', ', $deportes) . ".</p>";
+        echo "<p>Practica $cantidad_deportes deporte(s): " . implode(', ', $deportes) . ".</p>"; //implode transforma en cadena el arreglo de deportes
     } else {
         echo "<p>No practica ningún deporte.</p>";
     }

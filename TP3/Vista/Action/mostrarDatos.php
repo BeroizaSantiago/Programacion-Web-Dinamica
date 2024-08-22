@@ -13,7 +13,7 @@ $restricciones = isset($_POST['restricciones']) ? $_POST['restricciones'] : '';
 $sinopsis = isset($_POST['sinopsis']) ? $_POST['sinopsis'] : '';
 
 // Ruta del directorio para subir imágenes
-$directorio = "../../Control/uploads/";
+$directorio = "../../uploads/";
 
 // Inicializar variable de imagen
 $imagen = "";

@@ -1,5 +1,5 @@
 <?php
-$dir = "../../Control/uploads/"; // Definimos Directorio donde se guarda el archivo
+$dir = "../../uploads/"; // Definimos Directorio donde se guarda el archivo
 $target_file = $dir . basename($_FILES["fileToUpload"]["name"]);
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 $ruta = $target_file; // Ruta completa del archivo
@@ -8,7 +8,7 @@ $ruta = $target_file; // Ruta completa del archivo
 // Check file size
 if ($_FILES["fileToUpload"]["size"] < 2000000) {
 
-    if ($fileType != "docx" && $fileType != "pdf") {
+    if ($fileType != "docx" && $fileType != "doc" && $fileType != "pdf") {
         echo "Solo archivos DOCX & PDF seran cargados.<br>";
     } else {
         // Comprobamos que no se hayan producido errores
