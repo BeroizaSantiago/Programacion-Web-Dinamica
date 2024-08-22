@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinem@s - Cargar Película</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="../../TP2/Control/validacionCine.js"></script>
+    <style>
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-container h1 {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control, .custom-select {
+            margin-bottom: 10px;
+        }
+        textarea {
+            resize: none;
+        }
+        .btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class ="border bg-info rounded">
+          <h5 class="ml2 text-left">Cinem@s</h5>
+        </div>
+        <div class="form-container">
+            <form action="Action/mostrarDatos.php" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="titulo">Título:</label>
+                            <input type="text" class="form-control" id="titulo" name="titulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="director">Director:</label>
+                            <input type="text" class="form-control" id="director" name="director" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="produccion">Producción:</label>
+                            <input type="text" class="form-control" id="produccion" name="produccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nacionalidad">Nacionalidad:</label>
+                            <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duracion">Duración:</label>
+                            <input type="text" class="form-control" id="duracion" name="duracion" required >
+                            <small>(minutos)</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="actores">Actores:</label>
+                            <input type="text" class="form-control" id="actores" name="actores" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guion">Guion:</label>
+                            <input type="text" class="form-control" id="guion" name="guion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="anio">Año:</label>
+                            <input type="text" class="form-control" id="anio" name="anio" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="genero">Género:</label>
+                            <select class="custom-select" id="genero" name="genero" required>
+                                <option value="">Seleccione</option>
+                                <option value="Comedia">Comedia</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Terror">Terror</option>
+                                <option value="Románticas">Románticas</option>
+                                <option value="Suspenso">Suspenso</option>
+                                <option value="Otras">Otras</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Restricciones de edad:</label><br>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="restricciones" id="todo_publico" value="Todo público" required>
+                                        <label class="form-check-label" for="todo_publico">Todo público</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="restricciones" id="mayores_7" value="Mayores de 7 años" required>
+                                        <label class="form-check-label" for="mayores_7">Mayores de 7 años</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="restricciones" id="mayores_18" value="Mayores de 18 años" required>
+                                        <label class="form-check-label" for="mayores_18">Mayores de 18 años</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="sinopsis">Sinopsis:</label>
+                    <textarea class="form-control" id="sinopsis" name="sinopsis" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen de la película:</label>
+                    <input type="file" class="form-control-file" id="imagen" name="imagen" required>
+                </div>
+                <div class="text-right">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <button type="button" class="btn btn-secondary" id="borrar">Borrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

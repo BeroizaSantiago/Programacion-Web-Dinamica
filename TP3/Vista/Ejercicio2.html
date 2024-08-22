@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivo de Texto</title>
+</head>
+<body>
+    <h1>Subir Archivo .txt</h1>
+    <form method="post" action="../Vista/Action/mostrarContenido.php" enctype="multipart/form-data">
+        <label for="archivo">Selecciona un archivo .txt:</label>
+        <input type="file" name="archivo" id="archivo" required>
+        <br><br>
+        <input type="submit" value="Subir y Mostrar Contenido">
+    </form>
+</body>
+</html>

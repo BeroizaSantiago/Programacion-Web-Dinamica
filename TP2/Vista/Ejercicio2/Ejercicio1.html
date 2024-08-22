@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Número</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>    
+    <script>
+        $(document).ready(function () {
+            $("form").validate({
+                rules: {
+                    numero: {
+                        required: true,
+                        number: true // Asegura que sea un número
+                    }
+                },
+                messages: {
+                    numero: {
+                        required: "Por favor, ingresa un número",
+                        number: "Por favor, ingresa un número válido"
+                    }
+                },
+                submitHandler: function (form) {
+                    form.submit(); // Si la validación es correcta, envía el formulario
+                }
+            });s
+        });
+    </script>
+</head>
+<body>
+    <h1>Ingrese un número</h1>
+    <form action="../../Control/Ejercicio2/Ejercicio1.php" method="post">
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero" required>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

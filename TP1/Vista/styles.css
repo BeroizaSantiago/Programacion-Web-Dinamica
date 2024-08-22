@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+input[type="radio"], input[type="checkbox"] {
+    padding: 10px 17px;
+    border: 1px solid #0f0f0f;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+label {
+    width: 90px; /* Ajusta el ancho según sea necesario */
+    margin-right: 5px;
+    font-weight: bold;
+    text-align: left; /* Opcional: alinea el texto a la derecha dentro del label */
+
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px 17px;
+    border: 1px solid #0f0f0f;
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"] {
+    margin-top: 20px;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    border:bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover{
+    background-color: #7845a0;
+}
+
+select {
+    width: 295px; /* Hacer que ocupe el 100% del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f8f8f8; /* Fondo gris claro */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+}
+
+
