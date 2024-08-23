@@ -81,10 +81,10 @@ echo "<!DOCTYPE html>
             text-decoration: none;
         }
         .container {
-            display: flex; /* Habilita flexbox */
-            flex-direction: column; /* Alinea los elementos en una columna */
-            align-items: center; /* Centra los elementos horizontalmente */
-            justify-content: center; /* Centra los elementos verticalmente */
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
             background-color: #e0f7da; 
             padding: 20px;
             border-radius: 8px;
@@ -96,11 +96,11 @@ echo "<!DOCTYPE html>
             display: flex;
             justify-content: center;
             align-items: center;
-            max-width: 60%; /* Asegura que la imagen no exceda el ancho del contenedor */
-            height: auto; /* Mantiene la relación de aspecto de la imagen */
-            border-radius: 8px; /* Bordes redondeados */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-            margin: 20px 0; /* Añade un margen vertical para separar la imagen del texto */
+            max-width: 60%;
+            height: auto; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            margin: 20px 0; 
         }
     </style>
 </head>
