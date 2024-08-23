@@ -13,7 +13,9 @@ $restricciones = isset($_POST['restricciones']) ? $_POST['restricciones'] : '';
 $sinopsis = isset($_POST['sinopsis']) ? $_POST['sinopsis'] : '';
 
 // Mostrar los datos en la página
-echo "<!DOCTYPE html>
+
+?>
+<!DOCTYPE html>
 <html lang='es'>
 <head>
     <meta charset='UTF-8'>
@@ -63,19 +65,18 @@ echo "<!DOCTYPE html>
     <a href='../Ejercicio4Cine.html' class='salir'>X</a>
         <h1 class='text-left'>La película introducida es:</h1>
         <ul class='list-group mt-4'>
-            <li class='list-group-item'><strong>Título:</strong> $titulo</li>
-            <li class='list-group-item'><strong>Director:</strong> $director</li>
-            <li class='list-group-item'><strong>Producción:</strong> $produccion</li>
-            <li class='list-group-item'><strong>Nacionalidad:</strong> $nacionalidad</li>
-            <li class='list-group-item'><strong>Duración:</strong> $duracion minutos</li>
-            <li class='list-group-item'><strong>Actores:</strong> $actores</li>
-            <li class='list-group-item'><strong>Guion:</strong> $guion</li>
-            <li class='list-group-item'><strong>Año:</strong> $anio</li>
-            <li class='list-group-item'><strong>Género:</strong> $genero</li>
-            <li class='list-group-item'><strong>Restricciones de edad:</strong> $restricciones</li>
-            <li class='list-group-item'><strong>Sinopsis:</strong> $sinopsis</li>
+            <li class='list-group-item'><strong>Título:</strong> <?php echo $titulo?></li>
+            <li class='list-group-item'><strong>Director:</strong> <?php echo $director?></li>
+            <li class='list-group-item'><strong>Producción:</strong> <?php echo $produccion?></li>
+            <li class='list-group-item'><strong>Nacionalidad:</strong> <?php echo $nacionalidad?></li>
+            <li class='list-group-item'><strong>Duración:</strong> <?php echo $duracion?> minutos</li>
+            <li class='list-group-item'><strong>Actores:</strong> <?php echo $actores?></li>
+            <li class='list-group-item'><strong>Guion:</strong> <?php echo $guion?></li>
+            <li class='list-group-item'><strong>Año:</strong> <?php echo $anio?></li>
+            <li class='list-group-item'><strong>Género:</strong> <?php echo $genero?></li>
+            <li class='list-group-item'><strong>Restricciones de edad:</strong> <?php echo $restricciones?></li>
+            <li class='list-group-item'><strong>Sinopsis:</strong> <?php echo $sinopsis?></li>
         </ul>
     </div>
 </body>
 </html>";
-?>

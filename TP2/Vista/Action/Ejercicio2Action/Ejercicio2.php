@@ -14,7 +14,9 @@ $objHoras = new horas();
 $totalHoras = $objHoras->sumaHoras($horas);
 
 // Mostrar el total de horas directamente
-echo "<!DOCTYPE html>
+
+?>
+<!DOCTYPE html>
 <html lang='es'>
 <head>
     <meta charset='UTF-8'>
@@ -23,9 +25,8 @@ echo "<!DOCTYPE html>
 </head>
 <body>
     <h1>Total de Horas de Cursada</h1>
-    <p>Total de horas cursadas por semana: $totalHoras</p>
+    <p><?php echo "Total de horas cursadas por semana: $totalHoras" ?></p>
     <br>
     <a href='../../Ejercicio2/Ejercicio2.html'>Volver al formulario</a>
 </body>
-</html>";
-?>
+</html>

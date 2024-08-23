@@ -10,7 +10,10 @@ $objCalculadora = new calcular;
 $resultado = $objCalculadora->calcularNumero($operacion,$numero1,$numero2);
 
 // Mostrar el resultado
-echo "<!DOCTYPE html>
+
+?>
+
+<!DOCTYPE html>
 <html lang='es'>
 <head>
     <meta charset='UTF-8'>
@@ -19,10 +22,9 @@ echo "<!DOCTYPE html>
 </head>
 <body>
     <h1>Resultado de la Operación</h1>
-    <p>Operación: La operacion realizada es de $operacion , de los numeros: $numero1 y $numero2</p>
-    <p>Resultado: $resultado</p>
+    <p>Operación: <?php echo "La operacion realizada es de $operacion , de los numeros: $numero1 y $numero2"?></p>
+    <p>Resultado: <?php echo $resultado?></p>
     <br>
     <a href='../../Ejercicio2/Ejercicio7.html'>Volver al formulario</a>
 </body>
-</html>";
-?>
+</html>

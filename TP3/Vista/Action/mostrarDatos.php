@@ -42,7 +42,8 @@ if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
 }
 
 // Mostrar los datos en la página
-echo "<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang='es'>
 <head>
     <meta charset='UTF-8'>
@@ -108,19 +109,19 @@ echo "<!DOCTYPE html>
     <div class='container'>
         <h2>La película introducida es:</h2>
         <ul class='list-group'>
-            <li class='list-group-item'>Título: $titulo</li>
-            <li class='list-group-item'>Director: $director</li>
-            <li class='list-group-item'>Producción: $produccion</li>
-            <li class='list-group-item'>Nacionalidad: $nacionalidad</li>
-            <li class='list-group-item'>Duración: $duracion minutos</li>
-            <li class='list-group-item'>Actores: $actores</li>
-            <li class='list-group-item'>Guion: $guion</li>
-            <li class='list-group-item'>Año: $anio</li>
-            <li class='list-group-item'>Género: $genero</li>
-            <li class='list-group-item'>Restricciones: $restricciones</li>
-            <li class='list-group-item'>Sinopsis: $sinopsis</li>
-            <li class='list-group-item'>Imagen: <img src='$imagen' alt='Imagen de la película' class='img-fluid'></li>
+            <li class='list-group-item'>Título: <?php echo $titulo?></li>
+            <li class='list-group-item'>Director: <?php echo $director?></li>
+            <li class='list-group-item'>Producción: <?php echo $produccion?></li>
+            <li class='list-group-item'>Nacionalidad: <?php echo $nacionalidad?></li>
+            <li class='list-group-item'>Duración: <?php echo $duracion?> minutos</li>
+            <li class='list-group-item'>Actores: <?php echo $actores?></li>
+            <li class='list-group-item'>Guion: <?php echo $guion?></li>
+            <li class='list-group-item'>Año: <?php echo $anio?></li>
+            <li class='list-group-item'>Género: <?php echo $genero?></li>
+            <li class='list-group-item'>Restricciones: <?php echo $restricciones?></li>
+            <li class='list-group-item'>Sinopsis: <?php echo $sinopsis?></li>
+            <li class='list-group-item'>Imagen: <img src=' <?php echo $imagen?>' alt='Imagen de la película' class='img-fluid'></li>
         </ul>
     </div>
 </body>
-</html>";
+</html>

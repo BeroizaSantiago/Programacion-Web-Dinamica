@@ -13,7 +13,9 @@ $calculador = new CalcularTarifa($edad, $estudiante);
 $precio = $calculador->calcularPrecio();
 
 // Mostrar el resultado
-echo "<!DOCTYPE html>
+
+?>
+<!DOCTYPE html>
 <html lang='es'>
 <head>
     <meta charset='UTF-8'>
@@ -21,9 +23,8 @@ echo "<!DOCTYPE html>
     <title>Resultado - Cinem@s</title>
 </head>
 <body>
-    <h1>El precio de tu entrada es: $$precio</h1>
+    <h1><?php echo "El precio de tu entrada es: $$precio"?> </h1>
     <br>
     <a href='../../Ejercicio2/Ejercicio8.html'>Volver a calcular</a>
 </body>
-</html>";
-?>
+</html>
