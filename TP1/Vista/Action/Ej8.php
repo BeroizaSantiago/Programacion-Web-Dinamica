@@ -1,5 +1,4 @@
 <?php
-// Incluir la lógica de cálculo desde el archivo CalcularTarifa.php
 require_once '../../Control/Ejercicio8.php';
 
 // Recuperar los datos del formulario

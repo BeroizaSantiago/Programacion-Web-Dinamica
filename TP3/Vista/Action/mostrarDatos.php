@@ -20,7 +20,7 @@ $imagen = "";
 
 // Verificar si se ha subido una imagen
 if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
-    $imageFileType = strtolower(pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION));
+    $imageFileType = strtolower(pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)); //obtiene unicamente la extensión del archivo y lo pasa a minuscula
     $target_file = $directorio . basename($_FILES['imagen']['name']);
 
     // Verificar el tipo de archivo

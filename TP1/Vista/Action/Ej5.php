@@ -1,32 +1,20 @@
 <?php
 require_once '../../Control/Ejercicio4.php';
+require_once '../../Control/Ejercicio5.php';
 // Recuperar los datos del formulario
-$nombre = isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : 'Desconocido';
-$apellido = isset($_GET['apellido']) ? htmlspecialchars($_GET['apellido']) : 'Desconocido';
+$nombre = isset($_GET['nombre']) ? $_GET['nombre'] : 'Desconocido';
+$apellido = isset($_GET['apellido']) ? $_GET['apellido'] : 'Desconocido';
 $edad = isset($_GET['edad']) ? (int)$_GET['edad'] : 0;
-$direccion = isset($_GET['direccion']) ? htmlspecialchars($_GET['direccion']) : 'Desconocida';
+$direccion = isset($_GET['direccion']) ? $_GET['direccion'] : 'Desconocida';
 $nivel_estudios = isset($_GET['nivel_estudios']) ? (int)$_GET['nivel_estudios'] : 0;
-$sexo = isset($_GET['sexo']) ? htmlspecialchars($_GET['sexo']) : 'no especificado';
+$sexo = isset($_GET['sexo']) ? $_GET['sexo'] : 'no especificado';
 
 $objeEdad = new esMayor();
 $esMayorDeEdad = $objeEdad->calcularEdad($edad);
 
 // Determinar el nivel de estudios 
-//Se puede hacer en otro script como calcularEdad
-switch ($nivel_estudios) {
-    case 1:
-        $nivel_estudios_texto = "No tiene estudios";
-        break;
-    case 2:
-        $nivel_estudios_texto = "Estudios primarios";
-        break;
-    case 3:
-        $nivel_estudios_texto = "Estudios secundarios";
-        break;
-    default:
-        $nivel_estudios_texto = "No especificado";
-        break;
-}
+$objNivel = new Estudios();
+$nivel_estudios_texto = $objNivel->nivelEstudios($nivel_estudios);
 
 // Mostrar el mensaje correspondiente
 echo "<!DOCTYPE html>

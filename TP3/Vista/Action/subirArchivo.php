@@ -1,7 +1,7 @@
 <?php
 $dir = "../../uploads/"; // Definimos Directorio donde se guarda el archivo
 $target_file = $dir . basename($_FILES["fileToUpload"]["name"]);
-$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); ///obtiene unicamente la extensión del archivo
 $ruta = $target_file; // Ruta completa del archivo
 
 

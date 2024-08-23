@@ -1,9 +1,9 @@
 <?php
 // Recuperar los datos del formulario
-$nombre = isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : 'Desconocido';
-$apellido = isset($_GET['apellido']) ? htmlspecialchars($_GET['apellido']) : 'Desconocido';
+$nombre = isset($_GET['nombre']) ? $_GET['nombre'] : 'Desconocido';
+$apellido = isset($_GET['apellido']) ? $_GET['apellido'] : 'Desconocido';
 $edad = isset($_GET['edad']) ? (int)$_GET['edad'] : 0;
-$direccion = isset($_GET['direccion']) ? htmlspecialchars($_GET['direccion']) : 'Desconocida';
+$direccion = isset($_GET['direccion']) ? $_GET['direccion'] : 'Desconocida';
 
 // Mostrar el mensaje
 echo "<!DOCTYPE html>

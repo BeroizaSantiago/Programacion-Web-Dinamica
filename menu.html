@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #5a5a5a3c;
+        }
+
+        .menu-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .link-list {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .link-list a {
+            display: block;
+            margin-bottom: 5px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .link-list a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        #tp2Links .btn-primary {
+            background-color: #f13b3b;
+            border-color: #e36793;
+        }
+
+        #tp2Links .btn-primary:hover {
+            background-color: #e36767;
+            border-color: #e36767;
+        }
+
+        #colorback{
+            background-color: #a2aab528;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <h1>Menú</h1>
+    <button class="btn btn-primary" onclick="toggleLinks('tp1Links')">TP1</button>
+    <div id="tp1Links" class="link-list">
+        <a href="TP1/Vista/Ej1.html">→Ejercicio 1</a>
+        <a href="TP1/Vista/Ej2.html">→Ejercicio 2</a>
+        <a href="TP1/Vista/Ej3.html">→Ejercicio 3</a>
+        <a href="TP1/Vista/Ej4.html">→Ejercicio 4</a>
+        <a href="TP1/Vista/Ej5.html">→Ejercicio 5</a>
+        <a href="TP1/Vista/Ej6.html">→Ejercicio 6</a>
+        <a href="TP1/Vista/Ej7.html">→Ejercicio 7</a>
+        <a href="TP1/Vista/Ej8.html">→Ejercicio 8</a>
+    </div>
+
+    <button class="btn btn-primary" onclick="toggleLinks('tp2Links')">TP2</button>
+    <div id="tp2Links" class="link-list">
+        <button class="btn btn-primary" onclick="toggleLinks('tp2Ej2Links')">Ejercicio 2</button>
+        <div id="colorback">
+            <div id="tp2Ej2Links" class="link-list">
+                <a href="TP2/Vista/Ejercicio2/Ejercicio1.html">→Ejercicio 1</a>
+                <a href="TP2/Vista/Ejercicio2/Ejercicio2.html">→Ejercicio 2</a>
+                <a href="TP2/Vista/Ejercicio2/Ejercicio6.html">→Ejercicio 6</a>
+                <a href="TP2/Vista/Ejercicio2/Ejercicio7.html">→Ejercicio 7</a>
+                <a href="TP2/Vista/Ejercicio2/Ejercicio8.html">→Ejercicio 8</a>
+            </div>
+        </div> 
+        <a href="TP2/Vista/Ejercicio3Login.html">→Ejercicio 3</a>
+        <a href="TP2/Vista/Ejercicio4Cine.html">→Ejercicio 4</a>
+    </div>
+
+    <button class="btn btn-primary" onclick="toggleLinks('tp3Links')">TP3</button>
+    <div id="tp3Links" class="link-list">
+        <a href="TP3/Vista/Ejercicio1.html">→Ejercicio 1</a>
+        <a href="TP3/Vista/Ejercicio2.html">→Ejercicio 2</a>
+        <a href="TP3/Vista/Ejercicio3CineImagen.html">→Ejercicio 3</a>
+    </div>
+</div>
+
+<script>
+    function toggleLinks(id) {
+        var links = document.getElementById(id);
+        links.style.display = links.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>

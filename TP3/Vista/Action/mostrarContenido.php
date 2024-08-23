@@ -8,7 +8,7 @@ if ($fileType != "txt") {
     echo "Error: Solo se permiten archivos de texto (.txt).";
 } else {
         // Comprobamos que no haya errores al subir el archivo
-    if ($_FILES['archivo']['error'] == UPLOAD_ERR_OK) {
+    if ($_FILES['archivo']['error'] == 0) {
         // Movemos el archivo a la carpeta uploads
         if (move_uploaded_file($_FILES['archivo']['tmp_name'], $target_file)) {
             // Leemos el contenido del archivo y lo mostramos en un textarea

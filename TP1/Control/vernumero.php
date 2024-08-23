@@ -9,7 +9,7 @@
     <h1>Resultado</h1>
 
     <?php
-    if (isset($_POST['numero'])) {
+    if (isset($_POST['numero'])) { //isset verifica que no sea nulo o vacio
         $numero = $_POST['numero'];
 
         if ($numero > 0) {

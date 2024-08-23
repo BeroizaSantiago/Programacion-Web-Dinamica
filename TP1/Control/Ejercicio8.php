@@ -9,13 +9,15 @@ class CalcularTarifa {
     }
 
     public function calcularPrecio() {
+        $precio = 0;
         if ($this->edad < 12) {
-            return 160;
+            $precio = 160;
         } elseif ($this->esEstudiante && $this->edad >= 12) {
-            return 180;
+            $precio =  180;
         } else {
-            return 300;
+            $precio =  300;
         }
+        return $precio ;
     }
 }
 ?>

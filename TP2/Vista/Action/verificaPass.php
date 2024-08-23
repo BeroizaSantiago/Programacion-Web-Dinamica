@@ -1,8 +1,8 @@
 <?php
 require_once '../../Control/ejercicio3Verificador.php';
 
-$usuario = isset($_GET['usuario']) ? htmlspecialchars($_GET['usuario']) : '';
-$clave = isset($_GET['clave']) ? htmlspecialchars($_GET['clave']) : '';
+$usuario = isset($_GET['usuario']) ? $_GET['usuario']: '';
+$clave = isset($_GET['clave']) ? $_GET['clave'] : '';
 
 $verificador = new Verificador();
 $esValido = $verificador->verificarCredenciales($usuario, $clave);
